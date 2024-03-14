@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SecondViewController: UIViewController {
+class SecondPageViewController: UIViewController {
     
     
     private lazy var btnOne: UIButton = {
@@ -30,7 +30,7 @@ class SecondViewController: UIViewController {
     
 
     @objc func btnOneTapped(sender: UIButton){
-       let vc = ThirdViewController()
+       let vc = ThirdPageViewController()
         navigationController?.pushViewController(vc, animated: true
         )
     }

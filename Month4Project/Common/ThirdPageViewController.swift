@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ThirdViewController: UIViewController {
+class ThirdPageViewController: UIViewController {
     
     
     private lazy var bntRoot: UIButton = {
