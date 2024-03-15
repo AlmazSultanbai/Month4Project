@@ -23,44 +23,67 @@ class SignInViewController: UIViewController {
 //        view.font = .systemFont(ofSize: 34, weight: .bold)
 //        return view
 //    }()
-    private lazy var labelWelcom: UILabel = MakerView().
+    private lazy var labelWelcome: UILabel = MakerView().makeLabel(text: "Welcome Back",
+                                                                   textSize: 33,
+                                                                   textWeight: .bold)
+//    private lazy var labelSignIn: UILabel = {
+//        let view = UILabel()
+//        view.text = "Sign in to continue"
+//        view.textColor = .lightText
+//        view.font = .systemFont(ofSize: 20, weight: .regular)
+//        return view
+//    }()
+    private lazy var labelSignIn: UILabel = MakerView().makeLabel(text: "Sign In to Continue",
+                                                                  textColor: .lightText,
+                                                                  textSize: 20,
+                                                                  textWeight: .regular)
     
-    private lazy var labelSignIn: UILabel = {
-        let view = UILabel()
-        view.text = "Sign in to continue"
-        view.textColor = .lightText
-        view.font = .systemFont(ofSize: 20, weight: .regular)
-        return view
-    }()
+//    private lazy var labelEmployeeId: UILabel = {
+//        let view = UILabel()
+//        view.text = "Emplyee Id Email"
+//        view.textColor = .lightGray
+//        view.font = .systemFont(ofSize: 12)
+//        return view
+//    }()
+    private lazy var labelEmployeeId: UILabel = MakerView().makeLabel(text: "Employee Id Email", 
+                                                                      textColor: .lightGray,
+                                                                      textSize: 12)
     
-    private lazy var labelEmployeeId: UILabel = {
-        let view = UILabel()
-        view.text = "Emplyee Id Email"
-        view.textColor = .lightGray
-        view.font = .systemFont(ofSize: 12)
-        return view
-    }()
-    private lazy var labelRemenberMe: UILabel = {
-        let view = UILabel()
-        view.text = "Remember Me"
-        view.textColor = .black
-        return view
-    }()
-    private lazy var labelPassword: UILabel = {
-        let view = UILabel()
-        view.text = "Password"
-        view.font = .systemFont(ofSize: 12)
-        
-        view.textColor = .lightGray
-        return view
-    }()
-    private lazy var labelDontHaveAccount: UILabel = {
-        let view = UILabel()
-        view.text = "Don't have an account?"
-        view.font = .systemFont(ofSize: 12, weight: .regular)
-        view.textColor = .black
-        return view
-    }()
+//    private lazy var labelRemenberMe: UILabel = {
+//        let view = UILabel()
+//        view.text = "Remember Me"
+//        view.textColor = .black
+//        return view
+//    }()
+    private lazy var labelRememberMe: UILabel = MakerView().makeLabel(text: "Remember Me",
+                                                                      textColor: .black,
+                                                                      textSize: 18,
+                                                                      textWeight: .bold)
+    
+//    private lazy var labelPassword: UILabel = {
+//        let view = UILabel()
+//        view.text = "Password"
+//        view.font = .systemFont(ofSize: 12)
+//
+//        view.textColor = .lightGray
+//        return view
+//    }()
+    
+    private lazy var labelPassword: UILabel = MakerView().makeLabel(text: "Password",
+                                                                    textColor: .lightGray,
+                                                                    textSize: 12)
+    
+//    private lazy var labelDontHaveAccount: UILabel = {
+//        let view = UILabel()
+//        view.text = "Don't have an account?"
+//        view.font = .systemFont(ofSize: 12, weight: .regular)
+//        view.textColor = .black
+//        return view
+//    }()
+    private lazy var labelDontHaveAccount: UILabel = MakerView().makeLabel(text: "Don't have an account?",
+                                                                           textColor: .black,
+                                                                           
+                                                                           textSize: 12)
     //buttons
     private lazy var forgotPasswrdBtn: UIButton = {
         let view = UIButton(type: .system) // обьязательно для кнопки
@@ -90,29 +113,39 @@ class SignInViewController: UIViewController {
         return view
     }()
     //textfield
-    private lazy var emailTf: UITextField = {
-        let view = UITextField()
-        view.placeholder = "hello"
-        view.layer.cornerRadius = 16
-        view.layer.borderColor = UIColor.red.cgColor
-        view.layer.borderWidth = 0
-        let viewTf = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 1))
-        view.leftView = viewTf
-        view.leftViewMode = .always
-        return view
-    }()
+//    private lazy var emailTf: UITextField = {
+//        let view = UITextField()
+//        view.placeholder = "hello"
+//        view.layer.cornerRadius = 16
+//        view.layer.borderColor = UIColor.red.cgColor
+//        view.layer.borderWidth = 0
+//        let viewTf = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 1))
+//        view.leftView = viewTf
+//        view.leftViewMode = .always
+//        return view
+//    }()
+    private lazy var emailTf: UITextField = MakerView().makeTF(textColor: .black,
+                                                               placeholder: "Hello",
+                                                               borderColor: UIColor.red.cgColor,
+                                                               cornerRadius: 16)
+                                                               
     
-    private lazy var passwrdTf: UITextField = {
-        let view = UITextField()
-        view.placeholder = "password"
-        view.layer.cornerRadius = 16
-        view.layer.borderColor = UIColor.red.cgColor
-        view.layer.borderWidth = 0
-        let tfView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 1))
-        view.leftView = tfView
-        view.leftViewMode = .always
-        return view
-    }()
+    
+//    private lazy var passwrdTf: UITextField = {
+//        let view = UITextField()
+//        view.placeholder = "password"
+//        view.layer.cornerRadius = 16
+//        view.layer.borderColor = UIColor.red.cgColor
+//        view.layer.borderWidth = 0
+//        let tfView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 1))
+//        view.leftView = tfView
+//        view.leftViewMode = .always
+//        return view
+//    }()
+    private lazy var  passwrdTf: UITextField = MakerView().makeTF(textColor: .black,
+                                                                  placeholder: "Shunaka",
+                                                                  borderColor: UIColor.red.cgColor,
+                                                                  cornerRadius: 16)
     
     //subViews
     private lazy var subView: UIView = {
@@ -139,7 +172,7 @@ class SignInViewController: UIViewController {
         subView.addSubview(signInBtn)
         subView.addSubview(signUpBtn)
         subView.addSubview(labelSignIn)
-        subView.addSubview(labelRemenberMe)
+        subView.addSubview(labelRememberMe)
         subView.addSubview(labelPassword)
         subView.addSubview(labelDontHaveAccount)
         subView.addSubview(labelEmployeeId)
@@ -156,7 +189,7 @@ class SignInViewController: UIViewController {
         labelWelcome.translatesAutoresizingMaskIntoConstraints = false
         labelSignIn.translatesAutoresizingMaskIntoConstraints = false
         labelPassword.translatesAutoresizingMaskIntoConstraints = false
-        labelRemenberMe.translatesAutoresizingMaskIntoConstraints = false
+        labelRememberMe.translatesAutoresizingMaskIntoConstraints = false
         labelEmployeeId.translatesAutoresizingMaskIntoConstraints = false
         labelDontHaveAccount.translatesAutoresizingMaskIntoConstraints = false
         emailTf.translatesAutoresizingMaskIntoConstraints = false
@@ -213,9 +246,9 @@ class SignInViewController: UIViewController {
             labelDontHaveAccount.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
             labelDontHaveAccount.heightAnchor.constraint(equalToConstant: 30),
             
-            labelRemenberMe.topAnchor.constraint(equalTo: labelPassword.bottomAnchor, constant: 60),
-            labelRemenberMe.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 70),
-            labelRemenberMe.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 50),
+            labelRememberMe.topAnchor.constraint(equalTo: labelPassword.bottomAnchor, constant: 60),
+            labelRememberMe.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 70),
+            labelRememberMe.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 50),
             
             signUpBtn.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -47),
             signUpBtn.leadingAnchor.constraint(equalTo: labelDontHaveAccount.trailingAnchor, constant: 5),
@@ -252,6 +285,7 @@ class SignInViewController: UIViewController {
             if tf.text?.count ?? 0 < 5 {
                 passwrdTf.placeholder = error
                 passwrdTf.layer.borderWidth = 2
+                
             }
         }
     }

@@ -69,6 +69,7 @@
 			isa = PBXGroup;
 			children = (
 				C0848B5E2B9DD9E300984CFD /* AppDelegate */,
+				C05154742BA3D80000C4B1F3 /* Helper */,
 				C0848B602B9DDBAF00984CFD /* Common */,
 				C0848B5F2B9DD9F400984CFD /* Resources */,
 			);
@@ -80,7 +81,6 @@
 			children = (
 				C0848B4A2B9DD9AB00984CFD /* AppDelegate.swift */,
 				C0848B4C2B9DD9AB00984CFD /* SceneDelegate.swift */,
-				C05154742BA3D80000C4B1F3 /* Helper */,
 			);
 			path = AppDelegate;
 			sourceTree = "<group>";
