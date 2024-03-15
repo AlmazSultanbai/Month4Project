@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C05154732BA3D7F000C4B1F3 /* MakerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05154722BA3D7F000C4B1F3 /* MakerView.swift */; };
 		C0848B4B2B9DD9AB00984CFD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0848B4A2B9DD9AB00984CFD /* AppDelegate.swift */; };
 		C0848B4D2B9DD9AB00984CFD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0848B4C2B9DD9AB00984CFD /* SceneDelegate.swift */; };
 		C0848B4F2B9DD9AB00984CFD /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0848B4E2B9DD9AB00984CFD /* SignInViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C05154722BA3D7F000C4B1F3 /* MakerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakerView.swift; sourceTree = "<group>"; };
 		C0848B472B9DD9AB00984CFD /* Month4Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Month4Project.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0848B4A2B9DD9AB00984CFD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C0848B4C2B9DD9AB00984CFD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +41,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C05154742BA3D80000C4B1F3 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				C05154722BA3D7F000C4B1F3 /* MakerView.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
 		C0848B3E2B9DD9AB00984CFD = {
 			isa = PBXGroup;
 			children = (
@@ -70,6 +80,7 @@
 			children = (
 				C0848B4A2B9DD9AB00984CFD /* AppDelegate.swift */,
 				C0848B4C2B9DD9AB00984CFD /* SceneDelegate.swift */,
+				C05154742BA3D80000C4B1F3 /* Helper */,
 			);
 			path = AppDelegate;
 			sourceTree = "<group>";
@@ -165,6 +176,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C0848B622B9DDBCF00984CFD /* SecondPageViewController.swift in Sources */,
+				C05154732BA3D7F000C4B1F3 /* MakerView.swift in Sources */,
 				C0848B4F2B9DD9AB00984CFD /* SignInViewController.swift in Sources */,
 				C0848B642B9DDBF000984CFD /* ThirdPageViewController.swift in Sources */,
 				C0848B4B2B9DD9AB00984CFD /* AppDelegate.swift in Sources */,

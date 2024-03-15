@@ -15,13 +15,16 @@ class SignInViewController: UIViewController {
         return view
     }()
     //labels
-    private lazy var labelWelcome: UILabel = {
-        let view = UILabel()
-        view.text = "Welcome Back"
-        view.textColor = .white
-        view.font = .systemFont(ofSize: 35)
-        return view
-    }()
+    
+//    private lazy var labelWelcome: UILabel = {
+//        let view = UILabel()
+//        view.text = "Welcome Back"
+//        view.textColor = .white
+//        view.font = .systemFont(ofSize: 34, weight: .bold)
+//        return view
+//    }()
+    private lazy var labelWelcom: UILabel = MakerView().
+    
     private lazy var labelSignIn: UILabel = {
         let view = UILabel()
         view.text = "Sign in to continue"
@@ -225,7 +228,7 @@ class SignInViewController: UIViewController {
     @objc func signUpBtnTapped(sender: UIButton) {
         print("yes")
     }
-    @objc func signInBtnTapped(sender: UIButton){
+    @objc func signInBtnTapped(sender: UIButton){ // @objc работает через add target
         
         validateTF(emailTf, error: "please write email")
         validateTF2(passwrdTf, error: "please write password")
@@ -236,7 +239,8 @@ class SignInViewController: UIViewController {
         }
     }
     
-    private func validateTF(_ tf: UITextField, error: String){
+    private func validateTF(_ tf: UITextField, error: String){ // что бы функция заработала нужно ее вызывать
+                                                               // во view did load
         
           if tf.text?.count ?? 0 < 5 {
                 emailTf.placeholder = error
